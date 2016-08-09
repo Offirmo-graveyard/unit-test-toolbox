@@ -24,6 +24,11 @@
   },
   "homepage": "https://github.com/Offirmo/unit-test-toolbox#readme",
   "dependencies": {
+    "@types/chai": "^3.4.30",
+    "@types/chai-as-promised": "^0.0.28",
+    "@types/mocha": "^2.2.29",
+    "@types/sinon": "^1.16.27",
+    "@types/sinon-chai": "^2.7.26",
     "chai": "^3.5.0",
     "chai-as-promised": "^5.3.0",
     "mocha": "^3.0.2",
