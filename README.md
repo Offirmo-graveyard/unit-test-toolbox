@@ -18,7 +18,7 @@ Writing unit tests in Js always requires the same operations:
 
 The proposed solution:
 * install only one module `npm i -D @offirmo/unit-test-toolbox`
-* write the npm task `"test": "mocha --opts mocha.opts node_modules/@offirmo/unit-test-toolbox/mocha-chai-init.js '<glob_to_my_tests/**/*spec.js>'"`
+* write the npm task `"test": "mocha --opts mocha.opts node_modules/@offirmo/unit-test-toolbox/mocha-chai-init-node.js '<glob_to_my_tests/**/*spec.js>'"`
 * keep @offirmo/unit-test-toolbox up-to-date
 
 
