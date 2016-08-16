@@ -1,6 +1,8 @@
 # unit-test-toolbox
 An aggregation of quality npm modules to be used for writing unit tests.
 
+XXX in progress: working on integrating sinon properly
+
 This modules includes `mocha`, `chai`, `sinon`, `sinon-chai`, `chai-as-promised`, `chai-subset`
 This module also exposes:
 - a pre-made plumbing activating the `chai.expect` interface, and chai `sinon-chai` and `chai-as-promised` plugins
