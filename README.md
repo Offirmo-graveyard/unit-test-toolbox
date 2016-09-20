@@ -25,7 +25,7 @@ The proposed solution:
 
 
 ## Installation & usage
-Targetting node >= 6 & npm >= 3
+Targeting node >= 6 & npm >= 3 (for we abuse the flat deps)
 
 ```shell
 npm i --save-dev @offirmo/unit-test-toolbox
