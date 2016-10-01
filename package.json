@@ -18,8 +18,8 @@
     "npm"
   ],
   "bin": {
-    "mocha": "node_modules/mocha/bin/mocha",
-    "_mocha": "node_modules/mocha/bin/_mocha"
+    "mocha": "../node_modules/mocha/bin/mocha",
+    "_mocha": "../node_modules/mocha/bin/_mocha"
   },
   "author": "Offirmo <offirmo.net@gmail.com>",
   "license": "UNLICENSED",
