@@ -4,7 +4,8 @@
   "description": "An aggregation of quality npm modules to be used for writing unit tests.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "np": "np"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,7 @@
     "module",
     "npm"
   ],
-  "bin": {
+  "xxbin": {
     "mocha": "node_modules/mocha/bin/mocha",
     "_mocha": "node_modules/mocha/bin/_mocha"
   },
@@ -40,5 +41,8 @@
     "mocha": "^3.0.2",
     "sinon": "^1.17.5",
     "sinon-chai": "^2.8.0"
+  },
+  "devDependencies": {
+    "np": "^2.9.0"
   }
 }
