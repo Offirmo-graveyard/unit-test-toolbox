@@ -1,11 +1,11 @@
 "use strict";
 
-const Mocha = require('mocha')
-const chai = require('chai')
-const sinon_chai = require('sinon-chai')
-const chai_as_promised = require("chai-as-promised")
-const chai_subset = require('chai-subset')
-const chai_moment = require('chai-moment')
+var Mocha = require('mocha')
+var chai = require('chai')
+var sinon_chai = require('sinon-chai')
+var chai_as_promised = require("chai-as-promised")
+var chai_subset = require('chai-subset')
+var chai_moment = require('chai-moment')
 
 
 // expose chai.expect as a global variable
