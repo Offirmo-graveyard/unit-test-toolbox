@@ -1,17 +1,20 @@
 # unit-test-toolbox
-An aggregation of quality npm modules to be used for writing unit tests.
+A convenient aggregation of quality npm modules to be used for writing unit tests. Just install this module and you get everything needed at once!
 
 This modules includes `mocha`, `chai`, `sinon`, `sinon-chai`, `chai-as-promised`, `chai-subset`, `chai-moment`. 
 It also exposes:
-- a pre-made plumbing activating the `chai.expect` interface, and chai `sinon-chai` and `chai-as-promised` plugins
+- a pre-made plumbing activating the `chai.expect` interface, chai `sinon-chai` and `chai-as-promised` plugins
 - (for legacy nodes with npm <= 2) the `mocha` executable as a redirection to its integrated `mocha` executable
 
 **In progress**:
 - working on integrating sinon properly
+- working on typescript compatibility
 
 
 ## Introduction - the problem
-Writing unit tests in Js always requires the same operations:
+Writing unit tests in JavaScript with mocha/chai always requires the same operations:
+
+**WITHOUT @offirmo/unit-test-toolbox :-1: :hurtrealbad:**:
 * remembering all the libs needed
 * installing them: `npm install mocha chai sinon sinon-chai chai-as-promised`
 * if using typescript: `npm install @types/mocha @types/chai @types/sinon @types/sinon-chai @types/chai-as-promised`
@@ -20,6 +23,8 @@ Writing unit tests in Js always requires the same operations:
 * keep all those dependencies up-to-date
 
 The proposed solution:
+
+**WITH @offirmo/unit-test-toolbox :+1: :sunglasses: **:
 * install only one module `npm i -D @offirmo/unit-test-toolbox`
 * write the npm task `"test": "mocha --opts mocha.opts node_modules/@offirmo/unit-test-toolbox/mocha-chai-init-node.js '<glob_to_my_tests/**/*spec.js>'"`
 * keep @offirmo/unit-test-toolbox up-to-date
