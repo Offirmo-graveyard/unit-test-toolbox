@@ -12,22 +12,22 @@ It also exposes:
 
 
 ## Introduction - the problem
-Writing unit tests in JavaScript with mocha/chai always requires the same operations:
+Writing unit tests in JavaScript with mocha/chai requires assembling a bunch of modules and repeating the same operations:
 
-**WITHOUT @offirmo/unit-test-toolbox :-1: :hurtrealbad:**:
-* remembering all the libs needed
-* installing them: `npm install mocha chai sinon sinon-chai chai-as-promised`
-* if using typescript: `npm install @types/mocha @types/chai @types/sinon @types/sinon-chai @types/chai-as-promised`
-* write an init file for activating `chai.expect` (what else ?), `sinon-chai` and `chai-as-promised`
-* write the npm task `"test": "mocha --opts mocha.opts path/to/init.js '<glob_to_my_tests/**/*spec.js>'"`
-* keep all those dependencies up-to-date
+**:-1: WITHOUT @offirmo/unit-test-toolbox :-1: :hurtrealbad:**:
+1. remembering all the libs needed
+1. installing them: `npm install mocha chai sinon sinon-chai chai-as-promised`
+1. if using typescript: `npm install @types/mocha @types/chai @types/sinon @types/sinon-chai @types/chai-as-promised`
+1. write an init file for activating `chai.expect` (what else ?), `sinon-chai` and `chai-as-promised`
+1. write the npm task `"test": "mocha --opts mocha.opts path/to/init.js '<glob_to_my_tests/**/*spec.js>'"`
+1. keep all those dependencies up-to-date
 
 The proposed solution:
 
-**WITH @offirmo/unit-test-toolbox :+1: :sunglasses: **:
-* install only one module `npm i -D @offirmo/unit-test-toolbox`
-* write the npm task `"test": "mocha --opts mocha.opts node_modules/@offirmo/unit-test-toolbox/mocha-chai-init-node.js '<glob_to_my_tests/**/*spec.js>'"`
-* keep @offirmo/unit-test-toolbox up-to-date
+**:+1: WITH @offirmo/unit-test-toolbox :+1: :sunglasses:**:
+1. install only one module `npm i -D @offirmo/unit-test-toolbox`
+1. write the npm task `"test": "mocha --opts mocha.opts node_modules/@offirmo/unit-test-toolbox/mocha-chai-init-node.js '<glob_to_my_tests/**/*spec.js>'"`
+1. keep @offirmo/unit-test-toolbox up-to-date
 
 
 ## Installation & usage
