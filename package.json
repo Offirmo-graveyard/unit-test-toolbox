@@ -27,14 +27,14 @@
     "@types/chai": "^4",
     "@types/chai-as-promised": "^7",
     "@types/mocha": "^2",
-    "@types/sinon": "^2",
+    "@types/sinon": "^4",
     "@types/sinon-chai": "^2",
     "chai": "^4",
     "chai-as-promised": "^7",
     "chai-moment": "^0.1",
     "chai-subset": "^1",
-    "mocha": "^3",
-    "sinon": "^3",
+    "mocha": "^4",
+    "sinon": "^4",
     "sinon-chai": "^2"
   }
 }
