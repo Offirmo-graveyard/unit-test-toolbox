@@ -4,8 +4,7 @@
   "description": "An aggregation of quality npm modules to be used for writing unit tests.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"no need for tests\"",
-    "np": "np"
+    "test": "echo \"no need for tests for this kind of repo\""
   },
   "repository": {
     "type": "git",
@@ -18,10 +17,6 @@
     "module",
     "npm"
   ],
-  "xxbin": {
-    "mocha": "node_modules/mocha/bin/mocha",
-    "_mocha": "node_modules/mocha/bin/_mocha"
-  },
   "author": "Offirmo <offirmo.net@gmail.com>",
   "license": "UNLICENSED",
   "bugs": {
@@ -41,8 +36,5 @@
     "mocha": "^3",
     "sinon": "^3",
     "sinon-chai": "^2"
-  },
-  "devDependencies": {
-    "np": "^2.9.0"
   }
 }
