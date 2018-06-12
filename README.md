@@ -1,3 +1,5 @@
+**THIS REPO HAS BEEN MOVED TO https://github.com/Offirmo/offirmo-monorepo/tree/master/4-tools/unit-test-toolbox**
+
 # unit-test-toolbox
 A convenient aggregation of quality npm modules to be used for writing unit tests.
 Just install this module and you get everything needed at once!
