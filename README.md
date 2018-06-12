@@ -1,10 +1,27 @@
 # unit-test-toolbox
-A convenient aggregation of quality npm modules to be used for writing unit tests. Just install this module and you get everything needed at once!
+A convenient aggregation of quality npm modules to be used for writing unit tests.
+Just install this module and you get everything needed at once!
 
-This modules includes `mocha`, `chai`, `sinon`, `sinon-chai`, `chai-as-promised`, `chai-subset`, `chai-moment`. 
+**v4 important note, breaking change:**
+* As we strive to write solid unit tests, v4 now includes and activates [`dirty-chai`](https://github.com/prodatakey/dirty-chai)
+* dropped legacy node compatibility (<2) may still work but didn't try and won't maintain.
+
+
+This modules bundles:
+* `mocha`
+* `chai`
+* `dirty-chai`
+* `sinon`
+* `sinon-chai`
+* `chai-as-promised`
+* `chai-subset`
+* `chai-moment`
 It also exposes:
-- a pre-made plumbing activating the `chai.expect` interface, chai `sinon-chai` and `chai-as-promised` plugins
-- (for legacy nodes with npm <= 2) the `mocha` executable as a redirection to its integrated `mocha` executable
+- a pre-made plumbing for:
+  - activating the `chai.expect` interface
+  - activating correctly the chai alteration `dirty-chai` **[READ THIS](https://github.com/prodatakey/dirty-chai#use-with-chai-as-promised)**
+  - activating correctly the chai plugins: `sinon-chai`, `chai-as-promised`, `chai-subset`, `chai-moment`
+- a pre-made mocha options file
 
 **In progress**:
 - working on integrating sinon properly
@@ -16,7 +33,7 @@ Writing unit tests in JavaScript with mocha/chai requires assembling a bunch of 
 
 **:-1: WITHOUT @offirmo/unit-test-toolbox :-1: :hurtrealbad:**:
 1. remembering all the libs needed
-1. installing them: `npm install mocha chai sinon sinon-chai chai-as-promised`
+1. installing them: `npm install mocha chai sinon sinon-chai chai-as-promised chai-subset chai-moment`
 1. if using typescript: `npm install @types/mocha @types/chai @types/sinon @types/sinon-chai @types/chai-as-promised`
 1. write an init file for activating `chai.expect` (what else ?), `sinon-chai` and `chai-as-promised`
 1. write the npm task `"test": "mocha --opts mocha.opts path/to/init.js '<glob_to_my_tests/**/*spec.js>'"`
@@ -26,7 +43,7 @@ The proposed solution:
 
 **:+1: WITH @offirmo/unit-test-toolbox :+1: :sunglasses:**:
 1. install only one module `npm i -D @offirmo/unit-test-toolbox`
-1. write the npm task `"test": "mocha --opts mocha.opts node_modules/@offirmo/unit-test-toolbox/mocha-chai-init-node.js '<glob_to_my_tests/**/*spec.js>'"`
+1. copy this npm task `"test": "mocha --opts mocha.opts node_modules/@offirmo/unit-test-toolbox/mocha-chai-init-node.js '<glob_to_my_tests/**/*spec.js>'"`
 1. keep @offirmo/unit-test-toolbox up-to-date
 
 
@@ -46,27 +63,6 @@ If you want to use the pre-written init file, reference it in your `test` task:
   },
 ```
 
-Suggested `mocha.opts`:
-```
---reporter spec
---check-leaks
---es_staging
---full-trace
---harmony
-```
-
-### Legacy
-For node 0.10 with npm 2, reference a special branch in `package.json`
-```
-"@offirmo/unit-test-toolbox": "git://github.com/offirmo/unit-test-toolbox.git#legacy-node_v0.10",
-```
-You can then use `mocha` as usual (transparently forwarded).
-
-`sinon` should be imported through unit-test-toolbox:
-```js
-var sinon = require('@offirmo/unit-test-toolbox/node_modules/sinon')
-```
-
 
 ## See also
 * mocha
@@ -80,3 +76,6 @@ var sinon = require('@offirmo/unit-test-toolbox/node_modules/sinon')
 
 ## Contributing
 Suggestions welcome.
+TODO
+* https://github.com/prodatakey/dirty-chai
+* https://github.com/prodatakey/dirty-chai/issues/12
